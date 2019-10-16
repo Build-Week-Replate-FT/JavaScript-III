@@ -19,11 +19,9 @@ function GameObject(attribute) {
     this.createdAt = attribute.createdAt;
     this.name = attribute.name;
     this.dimensions = attribute.dimensions;
-    this.destroy = function(){
-      return `${this.name} was removed from the game`;
-    }
-
-
+    this.destroy = function() {
+    return `${this.name} was removed from the game`;
+  }
 }
 /*
   === CharacterStats ===
@@ -32,13 +30,13 @@ function GameObject(attribute) {
   * should inherit destroy() from GameObject's prototype
 */
 function CharacterStats(attribute) {
+ 
   this.healthPoints = attribute.healthPoints;
   this.takeDamage = function() {
     return `${attribute.name} took damage`
   }
   GameObject.call(this, attribute);
-
-}
+  }
 /*
   === Humanoid (Having an appearance or character resembling that of a human.) ===
   * team
@@ -49,14 +47,17 @@ function CharacterStats(attribute) {
   * should inherit takeDamage() from CharacterStats
 */
  function Humanoid(attribute) {
+    
+    
     this.team = attribute.team;
     this.weapons = attribute.weapons;
     this.language = attribute.language;
     this.greet = function() {
       return `${attribute.name} offers a greeting in ${this.language}`
     }
-    GameObject.call(this, attribute);
+     GameObject.call(this, attribute);
     CharacterStats.call(this, attribute);
+    
 
  }
 /*
