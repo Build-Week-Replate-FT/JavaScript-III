@@ -20,9 +20,12 @@ function GameObject(attribute) {
     this.name = attribute.name;
     this.dimensions = attribute.dimensions;
     this.destroy = function() {
-    return `${this.name} was removed from the game`;
-  }
+      return `${this.name} was removed from the game`;
+    }
+   
 }
+
+
 /*
   === CharacterStats ===
   * healthPoints
@@ -36,7 +39,8 @@ function CharacterStats(attribute) {
     return `${attribute.name} took damage`
   }
   GameObject.call(this, attribute);
-  }
+}
+  
 /*
   === Humanoid (Having an appearance or character resembling that of a human.) ===
   * team
@@ -55,7 +59,6 @@ function CharacterStats(attribute) {
     this.greet = function() {
       return `${attribute.name} offers a greeting in ${this.language}`
     }
-     GameObject.call(this, attribute);
     CharacterStats.call(this, attribute);
     
 
