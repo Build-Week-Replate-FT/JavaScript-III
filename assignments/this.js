@@ -1,10 +1,10 @@
 /* The for principles of "this";
 * in your own words. explain the four principle for the "this" keyword below.
 *
-* 1. in a global scope this is refering to the window or console object  
-* 2. implicit binding is refering to the object you are currently working on
-* 3. when using a new constuctor binding the this keyword is refering to the object being created and returned
-* 4. in explicit binding the this keyword is defined directly
+* 1. The keyword This on a global scope refers to the window or console object  
+* 2. The keyword This in implicit binding refers to the object to left of the kewword This.
+* 3. The keyword This when used with the keyword New in a constuctor binding refers to the object being created and returned
+* 4. The keyword this in explicit binding refers to the parameter being added.
 *
 * write out a code example of each explanation above
 */
